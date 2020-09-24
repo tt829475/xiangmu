@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>用户登录：</legend>
+        <p>用户姓名：<input type="text" class="username"></p>
+        <p>用户密码：<input type="password" class="password"></p>
+        <p><input type="checkbox">记住用户名和密码</p>
+        <p><input type="button" value="登录"></p>
+    </fieldset>
+
+</body>
+<script>
+    //本地存储的概念和特点
+    //主要是用来作为本地存储用的
+    //在HTML5中，新加入了一个localStorage特性
+    //localStorage一般浏览器的支持5M大小。这个在不同的浏览器中localStorage会有所不同
+    //目前所有的浏览器中都会把localStorage的值类型限定为string类型（json.parse进行相关的转换）
+    //localStorage本质上是对字符串的读取，如果存储内容多的话会消耗内存，会导致页面变卡
+    //存：键值对（名称和值都是自由设定）
+    //如果键值相同后面会覆盖前面
+    // window.localStorage.name = 'haha';
+    // window.localStorage.age = 10;
+    // window.localStorage.setItem('haha', 'nan')
+    // let obj = {
+    //     name: 11,
+    //     d: 22
+    // }
+    // let a = [1, 2, 5, 'haha'];
+    // window.localStorage.setItem('dataa', a);
+    // window.localStorage.setItem('dataobj', JSON.stringify(obj));
+
+
+
+
+
+    //取,通过存储键值如果key值不存在，返回undefined
+    // console.log(window.localStorage.name);
+    // console.log(window.localStorage.getItem('dataa'.split(',')));
+    // console.log(window.localStorage.getItem('dataobj'));
+
+
+
+    //删
+    //1.将localStorage的所有内容清楚
+    // window.localStorage.clear();
+    //将localStorage中的某个键值对删除
+    // localStorage.removeItem('name');
+
+
+
+    //1.取出设置的文本框
+    const aInput = document.querySelectorAll('input');
+    if (localStorage.getItem('username') && localStorage.getItem('password')) {
+        let user = localStorage.getItem('username');
+        let pass = localStorage.getItem('password');
+        aInput[0].value = user;
+        aInput[1].value = pass;
+        aInput[2].checked = true
+    }
+    aInput[3].onclick = function() {
+        if (aInput[2].checked) {
+            localStorage.setItem('username', aInput[0].value);
+            localStorage.setItem('password', aInput[1].value)
+        } else {
+            localStorage.removeItem('username');
+            localStorage.removeItem('password')
+        }
+        alert('按钮触发');
+    }
+</script>
+
+</html>

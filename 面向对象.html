@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .tab {
+            font-size: 14px;
+        }
+        
+        .tab_title {
+            width: 250px;
+            height: 24px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        
+        .tab_title a {
+            width: 50px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            display: block;
+            float: left;
+        }
+        
+        .tab_title a.active {
+            background: red;
+        }
+        
+        .tab_content .item {
+            width: 250px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        
+        .tab_content ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .tab_content li {
+            list-style: none;
+            line-height: 24px;
+        }
+    </style> -->
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="tab">
+        <div class="tab_title">
+            <a href="javascript:;" class="active">精选</a>
+            <a href="javascript:;">社会</a>
+            <a href="javascript:;">娱乐</a>
+            <a href="javascript:;">生活</a>
+            <a href="javascript:;">体育</a>
+        </div>
+        <div class="tab_content">
+            <div class="item" style="display:block">
+                <ul>
+                    <li><a href="#">韩国数万名医生集体罢工推荐</a></li>
+                    <li><a href="#">日本大阪世博会会徽公布资讯</a></li>
+                    <li><a href="#">华春莹再批纳瓦罗：他谎话连篇热点</a></li>
+                    <li><a href="#">又一品牌宣布：全面退出！新闻</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">浙江舟山持刀伤人案致2死1伤关注</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="#">巩俐为老公庆生 一同切蛋糕大秀恩爱</a></li>
+                    <li><a href="#">日本大阪世博会会徽公布资讯</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="#">女子2次抢金店：想去监狱里生活</a></li>
+                    <li><a href="#">小伙给空姐女友过七夕，突然被抓！</a></li>
+                    <li><a href="#">一女士花74万买了件衣服</a></li>
+                    <li><a href="#">太难!劝病人反被家属打骨折还将被拘</a></li>
+                    <li><a href="#">情侣入睡，男孩突然坐起喊疼……</a></li>
+                    <li><a href="#">成都的哥跳河救人失踪</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="#">华春莹再批纳瓦罗：他谎话连篇热点</a></li>
+                    <li><a href="#">日本大阪世博会会徽公布资讯</a></li>
+                    <li><a href="#">又一品牌宣布：全面退出！新闻</a></li>
+                    <li><a href="#">韩国数万名医生集体罢工推荐</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">浙江舟山持刀伤人案致2死1伤关注</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <li><a href="#">浙江舟山持刀伤人案致2死1伤关注</a></li>
+                    <li><a href="#">韩国数万名医生集体罢工推荐</a></li>
+                    <li><a href="#">华春莹再批纳瓦罗：他谎话连篇热点</a></li>
+                    <li><a href="#">又一品牌宣布：全面退出！新闻</a></li>
+                    <li><a href="#">33名博士被清退，因为“失联”？热议</a></li>
+                    <li><a href="#">日本大阪世博会会徽公布资讯</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <div class="box"></div>
+
+</body>
+<script>
+    //冲突，拆分
+    //全局变量和全局函数的冲突；
+    //函数式编程
+    //面向对象核心：类和对象
+    //类：一类事物，抽象的，不占据内存，构建类
+    //对象：类下面的具体事物，占据内存；
+    //js基于面向对象开发，没有类这个概念，后期的发展有了面向对象的概念，class类的写法
+    //面向对象适合复杂的程序，以小博大
+    //不断采用面向对象的开发，理解面向对象的意思
+    //面向对象的特点：抽象，封装，继承，多态
+    //js：的特点：封装，继承，多态
+    //学习目标
+    //忽略全局带来的影响
+    //面对对象的两种写法
+    //不断地去改写学习狗的案列以小博大，理解面向对象的核心
+    //理解程序中已经出现的类和对象是如何生成的
+    //梳理前面的面向对象相关知识
+    //变量是window下面的属性，函数是window下面的方法
+    // 构造函数的理解
+    //类，对象，属性，方法的意义
+    //面向对象和面向过程的区别
+    //面向过程：面向过程的思想是把一个项目。一件事情按照一定的顺序，从头到尾一步一步的做下去，先做什么，后做什么，一直到结束。
+    //面向对象：面向对象的思想是把一个人项目。一件事情分成更小的项目，或者说分成一个个更小的部分，每部分负责什么方面的功能，最后再由这部分组合而成为一个整体；
+    //自定义对象的创建
+    // var obj1 = new Object();
+    // obj1.name = 'haha';
+    // obj1.age = 100;
+    // obj1.sex = 'nan'
+    // obj1.showinfo = function() {
+    //     return this.name + this.age + this.sex;
+    // }
+    // var obj2 = new Object();
+    // obj2.name = 'ha';
+    // obj2.age = 10;
+    // obj2.sex = 'n'
+    // obj2.showinfo = function() {
+    //     return this.name + this.age + this.sex;
+    // }
+    // var obj3 = new Object();
+    // obj3.name = 'h';
+    // obj3.age = 1;
+    // obj3.sex = 'n'
+    // obj3.showinfo = function() {
+    //         return this.name + this.age + this.sex;
+    //     }
+    // console.log(obj3.showinfo());
+    //我们使用object类常见多个对象，出现代码冗余
+    //工厂模式：工厂模式可以解决创建多个对象代码冗余的问题
+    // function createObject(name, age, sex) {
+    //     var obj = new Object();
+    //     obj.name = 'haha';
+    //     obj.age = 10;
+    //     obj.sex = '男';
+    //     obj.showinfo = function() {
+    //         return this.name + this.age + this.sex;
+    //     }
+    //     return obj1;
+    // }
+    // let c = createObject('hehe', '100', 'nan');
+    // console.log(c.showinfo());
+    //弊端：工厂模式可以解决代码冗余的问题，解决不了对象识别的问题，你创建的对象依然可以看出是Object类下面的对象，不是独立的对象
+    //继续参考系统类
+    // function CreateObject(name, age, sex) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sex = sex;
+    //     this.showinfo = function() {
+    //         return this.name + this.age + this.sex;
+    //     }
+    //     return this;
+    // }
+    //new关键字去调用函数的时候，函数的内部发生如下的变化
+    //创建一个空对象，并且this变量引用该对象
+    //属性和方法被加入到this引用的对象中；
+    //并且最后隐式的返回this，创建也是隐式
+
+
+    // function CreateObject(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.showinfo = function() {
+    //         return this.name + this.age;
+    //     }
+    // };
+    // let c = new CreateObject('heihei', 50);
+    // let b = new CreateObject('yahou');
+    // console.log(c.name);
+    // console.log(c.age);
+    // console.log(c.showinfo());
+    // console.log(b.name);
+
+
+
+    //原型：每个函数都有一个原型对象，原型里面的属性和方法都是公有的，原型里面的this依然指向this出来的实例；
+    // function CreatePerson(name) {
+    //     this.name = name;
+    // }
+    // CreatePerson.prototype.showinfo = function() {
+    //     return this.name;
+    // }
+    // let c = new CreatePerson('lala');
+    // console.log(c.name);
+    // console.log(c.showinfo());
+
+
+    // Array.prototype.hehe = function() {
+    //     for (let i = 0; i < arguments.length; i++) {
+    //         this[this.length] = arguments[i];
+    //     }
+    //     return this.length;
+    // }
+    // let a = [1, 5, 3];
+    // console.log(a.hehe(5, 8, 6, 4));
+    // console.log(a);
+
+
+
+
+
+
+
+    // function Tab() {
+    //     //变量变成属性，作用域变成实例对象下面的，任何实例对象都可以获取
+    //     this.titles = document.querySelectorAll('.tab_title a');
+    //     this.items = document.querySelectorAll('.tab_content .item');
+
+    // };
+    // Tab.prototype.init = function() {
+    //     for (let i = 0; i < this.titles.length; i++) {
+    //         this.titles[i].onclick = () => {
+    //             for (let j = 0; j < this.titles.length; j++) {
+    //                 this.titles[j].className = '';
+    //                 this.items[j].style.display = 'none';
+    //             }
+    //             this.titles[i].className = 'active';
+    //             this.items[i].style.display = 'block';
+    //         }
+    //     }
+
+    // }
+    // let t1 = new Tab();
+    // t1.init();
+
+
+
+
+
+
+
+
+    //面向对象的开发的写法 
+    //混合开发：构造函数+原型
+    // function Fn() {
+    //     this.a = 100;
+    // }
+    // Fn.prototype.init = function() {
+    //     return this.a;
+    // }
+    // let a = new Fn();
+    // a.init();
+
+
+
+    //es6提供了更接近传统语言的（后端）的写法，引入了class（类）这个概念，作为对象的模板，通过class关键字，可以定义类
+    //基本上，es6的class可以看做只是一个语法糖
+    //语法糖：指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用。通常来说使用语法糖能够增加程序的可读性，从而减少程序的代码出错机会
+
+
+    // class Fn {
+    //     constructor() {
+    //         this.a = 200;
+    //     }
+    //     show() {
+    //         return this.a;
+    //     }
+    //     show1() {
+    //         return this
+    //     }
+    // }
+
+    // let a = new Fn();
+
+    // console.log(a.show());
+
+
+
+
+
+
+    function Drag(selector) {
+        this.box = document.querySelector(selector);
+        this.shortx = null;
+        this.shorty = null;
+        this.clonebox = null;
+    }
+    Drag.prototype.init = function() {
+        this.box.onmousedown = (ev) => {
+            var ev = ev || window.event;
+
+            this.down(ev);
+            document.onmousemove = (ev) => {
+                var ev = ev || window.event;
+
+                this.move(ev);
+            }
+            document.onmouseup = () => {
+                this.up();
+            }
+        }
+    }
+    Drag.prototype.down = function(ev) {
+        this.clonebox = this.box.cloneNode(true);
+        this.shortx = ev.offsetX;
+        this.shorty = ev.offsetY;
+        this.clonebox.style.cssText = `border:1px dashed #ccc;left:${this.box.offsetLeft}px;top:${this.box.offsetTop}px;background:transparent;`;
+        document.body.appendChild(this.clonebox);
+    }
+    Drag.prototype.move = function(ev) {
+        this.clonebox.style.left = ev.clientX - this.shortx + 'px';
+        this.clonebox.style.top = ev.clientY - this.shorty + 'px';
+
+    }
+    Drag.prototype.up = function() {
+        document.onmousemove = null;
+        document.onmouseup = null;
+        this.box.style.left = this.clonebox.offsetLeft + 'px';
+        this.box.style.top = this.clonebox.offsetTop + 'px';
+        document.body.removeChild(this.clonebox);
+
+    }
+    let a = new Drag('.box');
+    a.init();
+
+
+
+
+
+
+    // class Drag {
+    //     constructor(selector) {
+    //         this.box = document.querySelector(selector);
+    //         this.shortx = null;
+    //         this.shorty = null;
+    //         this.clonebox = null;
+
+    //     }
+    //     init() {
+    //         this.box.onmousedown = (ev) => {
+    //             var ev = ev || window.event;
+    //             this.down(ev);
+    //             document.onmousemove = (ev) => {
+    //                 var ev = ev || window.event;
+    //                 this.move(ev);
+    //             };
+    //             document.onmouseup = () => {
+    //                 this.up();
+    //             }
+    //         }
+    //     }
+    //     down(ev) {
+    //         this.clonebox = this.box.cloneNode(true);
+    //         this.shortx = ev.offsetX;
+    //         this.shorty = ev.offsetY;
+    //         this.clonebox.style.cssText = `border:1px dashed #ccc;left:${this.box.offsetLeft}px;top:${this.box.offsetTop}px;background:transparent;`;
+    //         document.body.appendChild(this.clonebox);
+
+    //     }
+    //     move(ev) {
+    //         this.clonebox.style.left = ev.clientX - this.shortx + 'px';
+    //         this.clonebox.style.top = ev.clientY - this.shorty + 'px';
+
+    //     }
+    //     up() {
+    //         document.onmousemove = null;
+    //         document.onmouseup = null;
+    //         this.box.style.left = this.clonebox.offsetLeft + 'px';
+    //         this.box.style.top = this.clonebox.offsetTop + 'px';
+    //         document.body.removeChild(this.clonebox);
+
+    //     }
+    // }
+    // let a = new Drag('.box');
+    // a.init();
+</script>
+
+</html>
